@@ -1,0 +1,13 @@
+repeat wait() until game:IsLoaded() 
+    game:GetService("Players").LocalPlayer.Idled:connect(function()
+    game:GetService("VirtualUser"):ClickButton2(Vector2.new())
+end)
+wait(1.2)
+game.StarterGui:SetCore("SendNotification", {
+Title = "AFK Script Enabled"; -- the title (ofc)
+Text = "You can go afk now!"; -- what the text says (ofc)
+Icon = "rbxassetid://57254792"; -- the image if u want. 
+Duration = 5; -- how long the notification should in secounds
+})
+local amount = fovamount
+game:GetService'Workspace'.Camera.FieldOfView = 120
